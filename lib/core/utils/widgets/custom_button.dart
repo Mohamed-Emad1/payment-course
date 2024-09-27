@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:payment_learn/core/utils/styles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.onTap, required this.text});
+  const CustomButton({
+    super.key,
+    this.onTap,
+    required this.text,
+    this.isLoading = false,
+  });
 
+  final bool isLoading;
   final String text;
   final void Function()? onTap;
   @override
@@ -19,7 +24,7 @@ class CustomButton extends StatelessWidget {
           ),
         ),
         onPressed: onTap,
-        child: Text(
+        child: isLoading ? const CircularProgressIndicator(): Text(
           text,
           style: Styles.text22,
         ),

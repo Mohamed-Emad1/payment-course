@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:payment_learn/Feature/data/repos/check_out_repo_implementation.dart';
+import 'package:payment_learn/Feature/presentation/manger/payment/payment_cubit.dart';
 import 'package:payment_learn/Feature/presentation/views/widgets/card_info_item.dart';
 import 'package:payment_learn/Feature/presentation/views/widgets/payment_sheet.dart';
 import 'package:payment_learn/Feature/presentation/views/widgets/total_price.dart';
@@ -64,7 +67,10 @@ class MyCartViewBody extends StatelessWidget {
                     ),
                     context: context,
                     builder: (context) {
-                      return const PaymentMethodsBottomSheet();
+                      return BlocProvider(
+                        create: (context) => PaymentCubit(CheckOutRepoImpl()),
+                        child: const PaymentMethodsBottomSheet(),
+                      );
                     });
               }),
           const SizedBox(
@@ -75,4 +81,3 @@ class MyCartViewBody extends StatelessWidget {
     );
   }
 }
-
