@@ -5,6 +5,9 @@ class PaymentIntetntInputModel {
   PaymentIntetntInputModel({required this.amount, required this.currency});
 
   toJson() {
-    return {'amount': amount, 'currency': currency};
+    return {
+       'amount': amount,
+      'currency': currency
+    };
   }
 }
