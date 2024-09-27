@@ -9,7 +9,7 @@ class OrderTotalPrice extends StatelessWidget {
   final String value;
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    return Row(
       children: [
         Text(
           tile,
@@ -17,7 +17,7 @@ class OrderTotalPrice extends StatelessWidget {
         ),
         const Spacer(),
         Text(
-           r'$' + value,
+          r'$' + value,
           style: Styles.text24,
         ),
       ],

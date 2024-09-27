@@ -14,7 +14,7 @@ AppBar buildAppbar({String? title, void Function()? onTap}) {
     elevation: 0,
     title: Center(
       child: Text(
-        title?? "",
+        title ?? "",
         style: Styles.text25,
       ),
     ),

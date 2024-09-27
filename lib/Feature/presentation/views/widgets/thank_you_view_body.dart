@@ -19,8 +19,8 @@ class ThankYouViewBody extends StatelessWidget {
             left: 0,
             right: 0,
             bottom: MediaQuery.of(context).size.height * 0.2 + 20,
-            child:const Padding(
-              padding:EdgeInsets.symmetric(horizontal: 25),
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25),
               child: CustomDachedLine(),
             ),
           ),
@@ -49,6 +49,3 @@ class ThankYouViewBody extends StatelessWidget {
     );
   }
 }
-
-
-

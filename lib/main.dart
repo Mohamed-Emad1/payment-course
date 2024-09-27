@@ -15,7 +15,7 @@ class Payment extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Payment Learn',
-      home:  MyCartView(),
+      home: MyCartView(),
     );
   }
 }
