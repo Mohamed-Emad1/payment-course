@@ -24,10 +24,12 @@ class CustomButton extends StatelessWidget {
           ),
         ),
         onPressed: onTap,
-        child: isLoading ? const CircularProgressIndicator(): Text(
-          text,
-          style: Styles.text22,
-        ),
+        child: isLoading
+            ? const CircularProgressIndicator()
+            : Text(
+                text,
+                style: Styles.text22,
+              ),
       ),
     );
   }

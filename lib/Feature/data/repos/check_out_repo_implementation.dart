@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dartz/dartz.dart';
 import 'package:payment_learn/Feature/data/repos/check_out.dart';
 import 'package:payment_learn/core/utils/api_service.dart';
@@ -15,6 +17,7 @@ class CheckOutRepoImpl extends CheckOutRepo {
           paymentIntentInput: paymentIntentInputModel);
       return right(null);
     } on Exception catch (e) {
+      log(e.toString());
       return left(
         ServerFailure(
           message: e.toString(),
